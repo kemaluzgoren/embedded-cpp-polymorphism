@@ -1,0 +1,11 @@
+# Build outputs
+build/
+out/
+*.exe
+*.o
+*.d
+*.obj
+
+# Machine-specific editor settings (launch.json and tasks.json are kept)
+.vscode/c_cpp_properties.json
+.vscode/settings.json
