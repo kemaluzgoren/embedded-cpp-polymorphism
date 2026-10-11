@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cmake-configure",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["-S", ".", "-B", "build", "-G", "MinGW Makefiles", "-DCMAKE_CXX_FLAGS=-g -O0 -Wall -Wextra"],
+      "options": { "cwd": "${workspaceFolder}" }
+    },
+    {
+      "label": "build-all",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "build"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "cmake-configure",
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}

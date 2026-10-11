@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug led_demo (host)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/led_demo/led_demo.exe",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "build-all",
+      "stopAtEntry": true
+    },
+    {
+      "name": "Debug sensor_demo (host)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/sensor_demo/sensor_demo.exe",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "build-all",
+      "stopAtEntry": true
+    },
+    {
+      "name": "Debug vtable_demo (host)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/led_demo/vtable_demo.exe",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "build-all",
+      "stopAtEntry": true
+    }
+  ]
+}
