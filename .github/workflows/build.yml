@@ -1,0 +1,23 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure (CMake)
+        run: cmake -S . -B build -DCMAKE_CXX_FLAGS="-Wall -Wextra"
+
+      - name: Build (CMake)
+        run: cmake --build build
+
+      - name: Run demos as tests
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Build and run (Makefile)
+        run: make run
